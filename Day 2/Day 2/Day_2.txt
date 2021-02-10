@@ -1,0 +1,191 @@
+
+a = [0,1,2,3,4,5,6,7,8]
+print (type(a))
+print (a)  
+# it always prints the values with comma seperated , thats list
+
+
+# Convert your list data to NumPy arrays
+import numpy as np
+
+x = np.array( a ) 
+print (type(x))
+
+print (x)
+# it always prints the values WITHOUT comma seperated , thats ndarray
+
+
+# to print the data type of the elements of array 
+print (x.dtype)
+
+
+# to print the dimension of the array 
+print (x.ndim)
+
+# to print the shape of the array 
+# returns a tuple listing the length of the array along each dimension
+# For a 1D array, the shape would be (n,) 
+# where n is the number of elements in your array.
+print (x.shape)
+
+
+# Using the built in function arange 
+import numpy as np 
+x = np.arange(20, dtype=np.uint8)
+print (x)
+
+
+# Array Operations
+import numpy as np
+a = np.arange(5) 
+print (a)
+
+b = np.arange(5) 
+print(b)
+
+x = a + b
+print (x) 
+
+x = a - b
+print (x)
+
+
+
+
+
+import matplotlib.pyplot as plt
+
+
+x = [1,2,3,4,5,6,7,8,9,10]
+
+y = [1,2,3,4,5,6,7,8,9,10]
+
+
+# Showing the points on the graph
+plt.scatter(x, y)
+
+# Simple Line plot
+plt.plot(x, y)
+
+
+# Setting the title
+plt.title("A Line Graph")
+
+# Setting the X Label 
+plt.xlabel("X")
+
+# Setting the Y Label
+plt.ylabel("Y")
+
+# Displaying the Grid
+plt.grid(True)
+
+# Changing the x axes limits of the scale
+plt.xlim(0, 10)
+
+# Changing the y axes limits of the scale
+plt.ylim(0, 10)
+
+
+# Showing the points on the graph
+plt.scatter(x, y)
+
+# Simple Line plot
+plt.plot(x, y)
+
+plt.savefig("scatter.jpg")
+
+
+
+"""
+Pie chart, where the slices will be ordered and plotted counter-clockwise:
+"""
+
+dept = ['CSE', 'ECE', 'IT', 'EE']
+nooffaculties = [15, 30, 25, 10]
+shades = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
+share = [0.1, 0, 0, 0]  # explode 1st slice
+
+plt.pie(nooffaculties, labels=dept, explode=share, colors=shades)
+#plt.pie(nooffaculties, labels=dept, explode=share, colors=shades, autopct='%1.2f%%', shadow=True, startangle=90)
+
+
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+
+
+# Pandas
+
+'''Loading your data '''
+import pandas as pd
+df = pd.read_csv("Salaries.csv")
+
+
+#number of dimensions
+df.ndim   
+
+#return a tuple representing the dimensionality
+df.shape 
+
+
+df.info()
+
+
+# We can use slicing for controlling the rows and columns
+df.iloc[ 0:1, 0:1 ]   # u do not use [] when using slicing
+
+
+df['rank'].unique()
+
+df['rank'].value_counts()
+
+
+#Find the minimum salary
+df['salary'].min()
+
+
+# Boolean Indexing
+# Find those rows which has null values in salary/phd column
+df['salary'].isnull()
+df[df['salary'].isnull()]
+
+df['phd'].isnull()
+df[df['phd'].isnull()]
+
+df1 = df.dropna()
+df.isnull().any(axis=0)
+df1.isnull().any(axis=0)
+
+
+df2 = df.fillna(0)
+df.isnull().any(axis=0)
+df2.isnull().any(axis=0)
+
+
+# fill all the records with missing values, with mean of that column
+df['salary'] = df['salary'].fillna(df['salary'].mean())
+df.isnull().any(axis=0)
+
+
+
+
+df['salary'] > 120000
+
+df[(df['salary'] > 120000) & (df['sex']=='Female')]
+
+
+
+
+df['salary'].mean()
+
+
+
+
+
+
+
+
+
+
+
