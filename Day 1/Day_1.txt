@@ -1,0 +1,265 @@
+print ("Hello from fine folks in Forsk!")
+
+print (2+3)
+
+#F9 button to exectue
+
+"""
+
+this is 
+multiline comment
+
+"""
+
+a = 13
+
+print (type(a))
+
+b = 2.3
+
+type(b)
+
+
+c = True
+
+type(c)
+
+
+d = "August Kranti"
+
+type(d)
+
+
+d = 'August Kranti'
+
+type(d)
+
+
+d = "A"
+
+type(d)
+
+
+d = 'A'
+
+type(d)
+
+e = None #null
+
+type(e)
+
+
+"""
+int
+float
+str
+bool
+NoneType
+"""
+
+
+#include <math.h> c programming
+
+import math
+
+
+print (dir(math))
+
+
+help(math.sqrt)
+
+
+math.sqrt(16)
+
+
+import pandas
+
+import numpy
+
+
+
+cityname = input("Enter the city name")
+
+
+print (cityname)
+
+type(cityname)
+
+
+
+
+
+age = int(input("Enter your age: "))
+
+
+
+str1 = "Oxford Vaccine"
+
+type(str1)
+
+
+len(str1)
+
+
+print (str1)
+
+print (str1[0])
+
+
+str1[1]
+
+
+str1[0:10]  #0 to 9 only, 10 excluded
+
+
+str1[-1]
+
+str1 = "Oxford Vaccine"
+str1[-3]
+
+#slicing in Python
+
+
+str1 = "Oxford Vaccine"
+
+
+str2 = str1.upper()
+
+
+str1 = "Forsk Coding School     "
+
+str2 = str1.rstrip()
+
+
+str1 = "Oxford Vaccine"
+
+str1[0] = 'o'
+
+#strings are read only
+#immutable
+
+
+name  = input ("Enter name please: ")
+
+
+"""
+>= 10, long
+else short
+
+"""
+
+
+
+while (True):
+    name  = input ("Enter name please: ")
+    
+    if (not name):
+        break
+    
+    if (len(name) >= 10):
+        print ("long name")
+    else:
+        print ("short name")
+    
+
+list1 = [1,2.3,True,4,5]
+
+type(list1)
+
+
+list1 = [1,2,3,4,5]
+
+#Add a new value 10
+
+list1.append(10)
+
+list1[0]
+list1[-1]
+
+#add a new value 11 at index 1
+
+list1.insert(1, 11)
+
+ls
+
+list1 = [1,10,2,10,3,10]
+
+list1.remove(10)
+
+
+list1 = [1,10,2,10,3,10]
+
+while (10 in list1):
+    list1.remove(10)
+
+
+
+list1 = [1,2,3,4,5]
+
+#iterator
+
+for x in list1:
+    print (x)
+
+
+list2 = ['Amar','Akbar','Anthony']
+
+
+for name in list2:
+    print (name)
+
+
+t1 = (1,2,3,4,5)
+
+type(t1)
+
+#read only, immutable
+
+t1[0] = 10
+
+
+#dictionary in Python
+    
+
+"""
+
+'India' -> 'Delhi''
+'USA' -> "Washington"
+'UK' -> 'London'
+
+"""
+
+dict1 = {
+ "India":'Delhi',
+ "USA":"Washington",
+ "UK": "London"
+
+ }
+
+
+type(dict1)
+
+#France, Paris
+
+dict1['France'] = 'Paris'
+
+
+dict1['India']
+
+
+dict1['India'] = "New Delhi"
+
+dict1.keys()
+
+del dict1['France']
+
+
+
+{
+ 
+ 'math' : {'mt1': 20, 'mt2': 23}
+ 
+ }
+
+
+
